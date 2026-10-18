@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080d19">
+  <title>NOVA | Scientific Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <main class="calculator">
+
+    <header class="header">
+      <div class="brand">
+        <div class="logo">∑</div>
+        <div>
+          <h1>OLAVARIO<span></span></h1>
+          <p>SCIENTIFIC CALCULATOR</p>
+        </div>
+      </div>
+
+      <button class="mode-button" id="angleMode">DEG</button>
+    </header>
+
+    <section class="display">
+      <div class="display-top">
+        <span>CALCULATION OUTPUT</span>
+        <span class="status"><i></i> READY</span>
+      </div>
+
+      <div class="expression" id="expression">Ready to calculate</div>
+      <div class="result" id="result" aria-live="polite">0</div>
+    </section>
+
+    <div class="memory-bar">
+      <button data-action="memory-clear">MC</button>
+      <button data-action="memory-recall">MR</button>
+      <button data-action="memory-add">M+</button>
+      <button data-action="memory-subtract">M−</button>
+      <button data-action="history">HIST</button>
+    </div>
+
+    <section class="keypad" aria-label="Calculator keypad">
+
+      <button class="key scientific" data-value="sin(">sin</button>
+      <button class="key scientific" data-value="cos(">cos</button>
+      <button class="key scientific" data-value="tan(">tan</button>
+      <button class="key scientific" data-value="log(">log</button>
+      <button class="key scientific" data-value="ln(">ln</button>
+
+      <button class="key scientific" data-value="(">(</button>
+      <button class="key scientific" data-value=")">)</button>
+      <button class="key scientific" data-value="π">π</button>
+      <button class="key scientific" data-value="e">e</button>
+      <button class="key scientific" data-value="!">n!</button>
+
+      <button class="key scientific" data-value="sqrt(">√x</button>
+      <button class="key scientific" data-action="square">x²</button>
+      <button class="key scientific" data-value="^">xʸ</button>
+      <button class="key scientific" data-value="%">%</button>
+      <button class="key danger" data-action="backspace">⌫</button>
+
+      <button class="key number" data-value="7">7</button>
+      <button class="key number" data-value="8">8</button>
+      <button class="key number" data-value="9">9</button>
+      <button class="key operator" data-value="/">÷</button>
+      <button class="key danger" data-action="clear">AC</button>
+
+      <button class="key number" data-value="4">4</button>
+      <button class="key number" data-value="5">5</button>
+      <button class="key number" data-value="6">6</button>
+      <button class="key operator" data-value="*">×</button>
+      <button class="key operator" data-value="-">−</button>
+
+      <button class="key number" data-value="1">1</button>
+      <button class="key number" data-value="2">2</button>
+      <button class="key number" data-value="3">3</button>
+      <button class="key operator" data-value="+">+</button>
+      <button class="key equals" data-action="calculate">=</button>
+
+      <button class="key scientific" data-action="sign">±</button>
+      <button class="key number zero" data-value="0">0</button>
+      <button class="key number" data-value=".">.</button>
+      <button class="key scientific" data-value="Ans">Ans</button>
+      <button class="key scientific" data-action="reciprocal">1/x</button>
+
+    </section>
+
+    <section class="history-panel" id="historyPanel" hidden>
+      <div class="history-heading">
+        <h2>Calculation History</h2>
+        <button data-action="clear-history" class="clear-history">Clear</button>
+      </div>
+      <div id="historyList">
+        <p class="empty-history">Your calculations will appear here.</p>
+      </div>]
+    </section>
+
+    <footer class="footer">
+      <span>NOVA ENGINE <b>1.0</b></span>
+      <span>BUILT FOR PRECISION</span>
+    </footer>
+
+  </main>
+
+</body>
+</html>
